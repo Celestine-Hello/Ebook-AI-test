@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffa900" />
+    <title>Reading — Little Library</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="flipbook-page">
+    <a class="flip-close" href="index.html" aria-label="Close book and return to library">×</a>
+    <main class="flipbook-shell">
+      <div class="flipbook-title"><span class="brand-mark">L</span><span id="book-title">Loading book…</span></div>
+      <div class="flipbook-stage">
+        <button id="page-prev" class="page-arrow page-arrow-left" type="button" aria-label="Previous pages">‹</button>
+        <div class="book-spread" id="book-spread" aria-live="polite">
+          <article class="book-page left-page" id="left-page"></article>
+          <div class="book-gutter" aria-hidden="true"></div>
+          <article class="book-page right-page" id="right-page"></article>
+        </div>
+        <button id="page-next" class="page-arrow page-arrow-right" type="button" aria-label="Next pages">›</button>
+        <button id="ai-toggle" class="ai-toggle" type="button" aria-expanded="false" aria-controls="ai-drawer" aria-label="Open AI tools menu" title="AI tools"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8 14.2 9l6.3 3-6.3 2.2-2.2 6.3L9.8 14.2 3.5 12l6.3-3L12 2.8Z"/><path d="m19 2 .7 2.3L22 5l-2.3.8L19 8l-.8-2.2L16 5l2.2-.7L19 2Z"/></svg></button>
+      </div>
+      <nav class="flip-controls" aria-label="Book controls">
+        <button id="control-prev" type="button" aria-label="Previous pages">‹</button><span class="page-counter" id="page-counter">1–2 / 3</span><button id="control-next" type="button" aria-label="Next pages">›</button>
+        <span class="control-divider"></span><button id="grid-toggle" type="button" aria-label="Show page overview" title="Page overview">▦</button><button id="zoom-in" type="button" aria-label="Zoom in">⌕<sup>+</sup></button><button id="zoom-out" type="button" aria-label="Zoom out">⌕<sup>−</sup></button><button id="fullscreen-toggle" type="button" aria-label="Toggle fullscreen" title="Fullscreen">⛶</button><a id="download-link" href="#" download aria-label="Download this book" title="Download PDF">⋯</a>
+      </nav>
+      <div class="page-overview" id="page-overview" hidden aria-label="Page overview"></div>
+    </main>
+    <div id="drawer-backdrop" class="drawer-backdrop" hidden></div>
+    <aside id="ai-drawer" class="ai-drawer" aria-label="AI reading tools" aria-hidden="true" inert>
+      <div class="drawer-head"><div><p class="eyebrow">READING COMPANION</p><h2>AI tools</h2></div><button id="ai-close" class="icon-button" type="button" aria-label="Close AI tools">×</button></div>
+      <p class="drawer-intro">A few ideas for exploring this book. Gemini will power these in a later experiment.</p>
+      <div class="tool-menu">
+        <button class="tool-item" type="button" data-tool="summary"><span class="tool-icon">✳</span><span><strong>Summarize this book</strong><small>Get the main ideas in a few lines</small></span><span class="tool-chevron">›</span></button>
+        <button class="tool-item" type="button" data-tool="speech"><span class="tool-icon">◖))</span><span><strong>Listen to this book</strong><small>Read the text aloud</small></span><span class="tool-chevron">›</span></button>
+        <button class="tool-item" type="button" data-tool="quiz"><span class="tool-icon">?</span><span><strong>Take a quick quiz</strong><small>Check what you remember</small></span><span class="tool-chevron">›</span></button>
+      </div>
+      <div id="tool-message" class="tool-message" role="status" aria-live="polite"><span class="message-spark">✳</span><span>AI is not connected yet. These tools are ready for a future Gemini integration.</span></div>
+      <span class="drawer-footer">EXPERIMENTAL · COMING LATER</span>
+    </aside>
+    <script src="reader.js"></script>
+  </body>
+</html>

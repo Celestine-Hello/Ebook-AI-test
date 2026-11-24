@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f1e8" />
+    <meta name="description" content="A small ebook library for experimenting with AI reading tools." />
+    <title>Little Library — Ebook Lab</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="index.html" aria-label="Little Library home"><span class="brand-mark">L</span><span>little library</span></a>
+      <span class="top-note">A tiny reading lab</span>
+    </header>
+    <main class="layout library-page">
+      <section class="intro">
+        <p class="eyebrow">READ · EXPLORE · EXPERIMENT</p>
+        <h1>A little room<br />for big ideas.</h1>
+        <p class="intro-copy">Pick a book, settle in, and explore a small collection made for testing new ways to read.</p>
+        <div class="collection-count"><span class="count-dot"></span><span id="book-count">2 books in the collection</span></div>
+      </section>
+      <section class="library" aria-labelledby="library-title">
+        <div class="section-heading"><div><p class="eyebrow">THE SHELF</p><h2 id="library-title">Your collection</h2></div><span class="shelf-icon" aria-hidden="true">✳</span></div>
+        <div id="book-list" class="book-list" aria-label="Books"></div>
+      </section>
+      <aside class="ai-card library-note"><div class="ai-symbol" aria-hidden="true">✳</div><div class="ai-copy"><p class="eyebrow">A NOTE FOR LATER</p><h2>Every book has its own reading room.</h2><p>Open a title to read its PDF. The sparkle button on each book page opens the AI experiment menu.</p></div></aside>
+      <footer><span>Made for curious readers.</span><span>Small library, open possibilities <span class="footer-star">✳</span></span></footer>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
